@@ -11,8 +11,8 @@ const dotenv = require("dotenv");
 dotenv.config({ path: "./env/.env" });
 
 // 4. configuramos la ruta de static(public)
-app.use("", express.static("public"));
-app.use("", express.static(__dirname + "/public"));
+app.use("/", express.static("public"));
+app.use("/", express.static(__dirname + "/public"));
 
 // 5. configuramos el motor de plantillas
 app.set("view engine", "ejs");
